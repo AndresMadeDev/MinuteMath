@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct MinuteMathApp: App {
+    @StateObject var viewModel = ViewModel()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MathScreen()
+                .environmentObject(viewModel)
         }
     }
 }

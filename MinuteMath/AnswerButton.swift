@@ -20,7 +20,7 @@ struct AnswerButton: View {
             .fontWeight(.bold)
             .padding()
             .foregroundColor(.white)
-            .background(Color.indigo)
+            .background(Color.cyan)
             .clipShape(RoundedRectangle(cornerRadius: 10))
             
             
