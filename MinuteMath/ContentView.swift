@@ -8,12 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
+    let columns = [
+           GridItem(.flexible()),
+           GridItem(.flexible()),
+       ]
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        LazyVGrid(columns: columns, spacing: 20)  {
+            ForEach(0 ..< 4) { item in
+                AnswerButton(number: 3)
+            }
+          
         }
         .padding()
     }
